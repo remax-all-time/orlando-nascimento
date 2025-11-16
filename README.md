@@ -119,6 +119,46 @@ O layout é baseado em Flexbox e pode ser facilmente modificado para diferentes 
 - ✅ iOS Safari 12+
 - ✅ Android Chrome 60+
 
+## 🚀 Deploy no GitHub Pages
+
+### Passos para colocar online:
+
+1. **Criar repositório no GitHub**:
+   - Acesse [github.com](https://github.com)
+   - Clique em "New repository"
+   - Nome: `orlando-nascimento` ou `linktree-orlando`
+   - Marque como "Public"
+   - Clique em "Create repository"
+
+2. **Fazer upload dos arquivos**:
+   - Faça upload de todos os arquivos do projeto
+   - Ou use Git commands:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/SEU_USUARIO/NOME_DO_REPO.git
+   git push -u origin main
+   ```
+
+3. **Ativar GitHub Pages**:
+   - Vá em "Settings" do repositório
+   - Role até "Pages"
+   - Em "Source" selecione "Deploy from a branch"
+   - Escolha "main" branch e "/ (root)"
+   - Clique em "Save"
+
+4. **Acessar o site**:
+   - URL será: `https://SEU_USUARIO.github.io/NOME_DO_REPO`
+   - Aguarde alguns minutos para o deploy
+
+### 📝 Customização pós-deploy:
+
+- **Domínio personalizado**: Edite o arquivo `CNAME`
+- **Imagens**: Substitua as imagens na pasta `assets/images/`
+- **Informações**: Edite o `index.html` conforme necessário
+
 ## 📄 Licença
 
 Este projeto é de uso livre para fins pessoais e comerciais.
