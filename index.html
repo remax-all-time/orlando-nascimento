@@ -6,6 +6,7 @@
     <title>Orlando Nascimento - Links</title>
     <link rel="icon" type="image/x-icon" href="assets/images/remax-balao.ico" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/modal.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +19,8 @@
 
     <main class="container">
       <div class="profile-section">
-        <div class="profile-image">
+        <div class="cover-image"></div>
+        <div class="profile-image" id="profileImageBtn">
           <img
             src="assets/images/foto-perfil.jpg"
             alt="Orlando Nascimento"
@@ -27,8 +29,12 @@
         </div>
 
         <h1 class="profile-name">Orlando Nascimento</h1>
-        <p class="profile-description">
+        <p class="profile-subtitle">
           Consultor Imobiliário - CRECI-AL 9796F
+        </p>
+        <p class="profile-description">
+          TÉCNICO EM TRANSAÇÕES IMOBILIÁRIAS<br>
+          <span class="certifications">Certificações : Documentação Imobiliária, Perito Judicial e Avaliações Imobiliárias </span>
         </p>
       </div>
 
@@ -73,11 +79,19 @@
             d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
           />
         </svg>
-        <span
-          >Imobiliária RE/MAX All Time CRECI/AL 9006-J - Maceió/AL - Farol, rua Dra Adalberto Marroquim, 66 A</span
+        <p
+          >Imobiliária RE/MAX All Time CRECI/AL 9006-J - Maceió-AL<br> Rua Dr Adalberto Marroquim, 66 A - Farol</p
         >
       </div>
     </footer>
+
+    <!-- Modal para visualização da foto -->
+    <div id="photoModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <img src="assets/images/foto-perfil.jpg" alt="Orlando Nascimento" class="modal-image">
+      </div>
+    </div>
 
     <script src="assets/js/script.js"></script>
   </body>

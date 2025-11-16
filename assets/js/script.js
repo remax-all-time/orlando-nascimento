@@ -2,10 +2,10 @@
 const userConfig = {
     name: 'Orlando Nascimento',
     description: 'Consultor Imobiliário - CRECI-AL 9796F',
-    phone: '+1234567890', // Substitua pelo número real
+    phone: '+5582991366223',
     email: 'contato.orlandonascimento@creci.org.br',
     website: 'https://www.remax.com.br/pt-br/corretores/alagoas/maceio-farol/orlando-nascimento/850711044',
-    location: 'Imobiliária RE/MAX All Time CRECI/AL 9006-J - Maceió/AL - Farol, rua Dra Adalberto Marroquim, 66 A'
+    location: 'Imobiliária RE/MAX All Time CRECI/AL 9006-J - Maceió-AL\nFarol, Rua Dr Adalberto Marroquim, 66 A'
 };
 
 // Inicialização da aplicação
@@ -25,12 +25,10 @@ function initializeApp() {
 // Atualiza informações do usuário
 function updateUserInfo() {
     const nameElement = document.querySelector('.profile-name');
-    const descriptionElement = document.querySelector('.profile-description');
-    const locationElement = document.querySelector('.location span');
+    const locationElement = document.querySelector('.location p');
     
     if (nameElement) nameElement.textContent = userConfig.name;
-    if (descriptionElement) descriptionElement.textContent = userConfig.description;
-    if (locationElement) locationElement.textContent = userConfig.location;
+    if (locationElement) locationElement.innerHTML = userConfig.location.replace('\n', '<br>');
 }
 
 // Configura o link do WhatsApp
@@ -179,6 +177,34 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Modal da foto de perfil
+function setupPhotoModal() {
+    const profileImageBtn = document.getElementById('profileImageBtn');
+    const modal = document.getElementById('photoModal');
+    const closeBtn = document.getElementById('closeModal');
+    
+    if (profileImageBtn && modal && closeBtn) {
+        profileImageBtn.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+        
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+        
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
+}
+
+// Inicializar modal
+document.addEventListener('DOMContentLoaded', function() {
+    setupPhotoModal();
+});
 
 // Exporta configurações para uso global
 window.userConfig = userConfig;
