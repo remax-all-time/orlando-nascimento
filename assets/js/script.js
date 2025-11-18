@@ -35,7 +35,7 @@ function updateUserInfo() {
 function setupWhatsAppLink() {
     const whatsappBtn = document.getElementById('whatsappBtn');
     if (whatsappBtn && userConfig.phone) {
-        const message = encodeURIComponent(`Olá ${userConfig.name}! Vi seu perfil e gostaria de conversar sobre imóveis.`);
+        const message = encodeURIComponent(`Olá, ${userConfig.name}!  Vi seu perfil e gostaria de conversar sobre Imóveis.`);
         whatsappBtn.href = `https://wa.me/${userConfig.phone.replace(/\D/g, '')}?text=${message}`;
     }
 }
